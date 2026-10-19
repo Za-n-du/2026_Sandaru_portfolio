@@ -8,6 +8,7 @@ No build step, no `node_modules` — open it, edit it, deploy it.
 ```
 portfolio/
 ├── index.html                      All sections: Home, About, Resume, Projects, Contact
+├── resume.html                     Online CV viewer ("View Resume" button) with open/download fallback
 ├── css/styles.css                  Design tokens (colours, fonts, spacing) + responsive layout
 ├── js/main.js                      Mobile menu, active-section highlighting, footer year
 ├── assets/
@@ -56,11 +57,14 @@ npx serve .
 2. Drag the whole `portfolio` folder onto the page.
 3. You get a live URL immediately; rename it under *Site configuration → Change site name*.
 
-**GitHub Pages**
-1. Create a repo named `Za-n-du.github.io` (your GitHub username + `.github.io`).
-2. Upload the *contents* of `portfolio/` to the repo root (so `index.html` is at the top level).
-3. Settings → Pages → Source: *Deploy from a branch* → `main` / root → Save.
-4. Live at https://za-n-du.github.io within a few minutes.
+**GitHub Pages** (repo: https://github.com/Za-n-du/2026_Sandaru_portfolio)
+1. Upload the *contents* of `portfolio/` to the repo root **keeping the folders** — drag `index.html`
+   plus the `css`, `js` and `assets` folders onto *Add file → Upload files*. Do not upload the files
+   loose: `index.html` looks for `css/styles.css`, `js/main.js` and `assets/...`, and without those
+   folders the page loads unstyled (blue links, huge icons, no photo, broken CV buttons).
+2. Settings → Pages → Source: *Deploy from a branch* → `main` / root → Save.
+3. Live at https://za-n-du.github.io/2026_Sandaru_portfolio/ within a few minutes (hard refresh with Ctrl+F5).
+   All paths are relative, so the `/2026_Sandaru_portfolio/` sub-path needs no changes.
 
 **Vercel**
 1. Push the folder to a GitHub repo.

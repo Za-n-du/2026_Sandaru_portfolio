@@ -276,6 +276,37 @@ p { margin: 0 0 1em; }
 .site-footer nav a:hover { color: var(--coffee-light); }
 .site-footer p { margin: 0; color: var(--text-muted); font-size: .88rem; }
 
+/* ===== Resume page (resume.html) ===== */
+.page-resume .site-header { background: rgba(11, 11, 11, .94); border-color: var(--line); }
+.cv-page { padding: calc(var(--header-h) + 32px) 0 56px; background: linear-gradient(180deg, var(--black), #120E0B); }
+.back-link { display: inline-flex; align-items: center; gap: .5em; margin-bottom: 24px; font-size: .92rem; color: var(--text-muted); text-decoration: none; }
+.back-link .icon { transform: scaleX(-1); }
+.back-link:hover { color: var(--coffee-light); }
+.cv-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px 24px; flex-wrap: wrap; margin-bottom: 28px; }
+.cv-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.cv-frame {
+  height: max(560px, calc(100svh - var(--header-h) - 120px));
+  border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; background: var(--ink);
+}
+.cv-object { display: block; width: 100%; height: 100%; border: 0; }
+.cv-fallback { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 24px; }
+.cv-fallback > .icon { width: 48px; height: 48px; color: var(--coffee-light); margin-bottom: 18px; }
+.cv-fallback h2 { font-size: 1.3rem; margin-bottom: 10px; }
+.cv-fallback p { color: var(--text-muted); max-width: 44ch; margin: 0; }
+.cv-fallback .btn-row { justify-content: center; margin-top: 24px; }
+.cv-hint { display: none; margin: 16px 0 0; font-size: .9rem; color: var(--text-muted); }
+.cv-hint a { color: var(--coffee-light); }
+.no-inline-pdf .cv-frame { height: auto; }
+.no-inline-pdf .cv-hint { display: none !important; }
+@media (max-width: 860px) {
+  .cv-frame { height: 72svh; min-height: 460px; }
+  .cv-hint { display: block; }
+}
+@media (max-width: 560px) {
+  .cv-actions { width: 100%; }
+  .cv-actions .btn { flex: 1 1 100%; }
+}
+
 /* ===== Page-load entrance (hero only) ===== */
 @media (prefers-reduced-motion: no-preference) {
   .hero-copy > * { animation: rise .8s var(--ease) both; }

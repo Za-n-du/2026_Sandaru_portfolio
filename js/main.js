@@ -43,6 +43,14 @@
   }
   setActive('home');
 
+  /* Resume page: browsers without an inline PDF viewer (e.g. Chrome on Android) get the
+     open/download fallback instead of an empty box */
+  const cvObject = document.querySelector('.cv-object');
+  if (cvObject && navigator.pdfViewerEnabled === false) {
+    body.classList.add('no-inline-pdf');
+    cvObject.replaceWith(cvObject.querySelector('.cv-fallback'));
+  }
+
   /* Footer year */
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();

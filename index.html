@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/images/sandaru-portrait-1000.webp" type="image/webp">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="assets/images/sandaru-portrait-600.webp 600w, assets/images/sandaru-portrait-1000.webp 1000w" imagesizes="(max-width: 860px) 100vw, 48vw">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -103,7 +103,7 @@
           <p class="hero-intro">Three years of hands-on work in office administration, coordination and mobile phone repair — now building practical skills in IT support and web &amp; mobile development.</p>
 
           <div class="btn-row">
-            <a class="btn btn-solid" href="assets/Sandaru_Lakshitha_CV.pdf" target="_blank" rel="noopener">
+            <a class="btn btn-solid" href="resume.html">
               View Resume <svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>
             </a>
             <a class="btn btn-outline" href="assets/Sandaru_Lakshitha_CV.pdf" download="Sandaru_Lakshitha_CV.pdf" data-cv="hero">
@@ -214,10 +214,17 @@
             </div>
 
             <div class="skill-group">
-              <h4>Customer service &amp; professional</h4>
+              <h4>Customer service &amp; communication</h4>
               <ul class="tag-list">
-                <li>Customer service</li><li>Communication</li><li>Problem-solving</li>
-                <li>Teamwork</li><li>Adaptability</li><li>Willingness to learn</li>
+                <li>Customer service</li><li>Communication</li><li>Technical troubleshooting</li><li>Problem-solving</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h4>Personal strengths</h4>
+              <ul class="tag-list">
+                <li>Responsible</li><li>Adaptable</li><li>Customer-focused</li>
+                <li>Practical problem-solving</li><li>Team coordination</li><li>Willingness to learn</li>
               </ul>
             </div>
           </div>
@@ -314,8 +321,9 @@
               <span class="status status-ongoing">In development</span>
             </div>
             <h3>Doncom Website</h3>
-            <p>A multi-page website built from Figma desktop and mobile designs, following a planned sitemap for structure and navigation.</p>
-            <ul class="tech"><li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>UI build</li></ul>
+            <p>Website UI design and development work for Doncom.</p>
+            <!-- TODO: add the confirmed tech stack and a link once the site is public -->
+            <ul class="tech"><li>UI design</li><li>Web development</li><li>Frontend</li></ul>
           </li>
 
           <li class="project-card">

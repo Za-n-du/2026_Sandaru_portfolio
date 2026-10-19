@@ -1,0 +1,5 @@
+# Never convert line endings in binary files (protects the CV PDF and photos)
+*.pdf  binary
+*.jpg  binary
+*.webp binary
+*.png  binary
